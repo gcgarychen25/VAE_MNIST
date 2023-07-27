@@ -1,0 +1,14 @@
+name: VAE_MNIST
+channels:
+  - defaults
+  - pytorch
+dependencies:
+  - python=3.8
+  - numpy
+  - matplotlib
+  - pytorch
+  - torchvision
+  - opencv
+  - pip
+  - pip:
+    - torch

@@ -1,0 +1,231 @@
+Warning: This is an experimental release of NCCL with an OFI plugin for use with libfabric on Perlmutter.
+In case of issues, please refer to our known issues: https://docs.nersc.gov/current/
+and open a help ticket if your issue is not listed: https://help.nersc.gov/
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+Traceback (most recent call last):
+  File "<string>", line 2, in create_engine
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+  File "<string>", line 2, in create_engine
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    dbapi = dbapi_meth(**dbapi_args)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+    return __import__("MySQLdb")
+ModuleNotFoundError: No module named 'MySQLdb'
+    dbapi = dbapi_meth(**dbapi_args)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+
+The above exception was the direct cause of the following exception:
+    return __import__("MySQLdb")
+ModuleNotFoundError: No module named 'MySQLdb'
+
+Traceback (most recent call last):
+
+The above exception was the direct cause of the following exception:
+  File "optuna_testing.py", line 70, in <module>
+    main()
+
+Traceback (most recent call last):
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+  File "optuna_testing.py", line 70, in <module>
+    main()
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+  File "<string>", line 2, in create_engine
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+  File "<string>", line 2, in create_engine
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+    return __import__("MySQLdb")
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+ModuleNotFoundError: No module named 'MySQLdb'
+
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+    return __import__("MySQLdb")
+The above exception was the direct cause of the following exception:
+
+ModuleNotFoundError: No module named 'MySQLdb'
+
+Traceback (most recent call last):
+The above exception was the direct cause of the following exception:
+
+  File "optuna_testing.py", line 70, in <module>
+    main()
+Traceback (most recent call last):
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+  File "optuna_testing.py", line 70, in <module>
+    main()
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+  File "<string>", line 2, in create_engine
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+  File "<string>", line 2, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+    return __import__("MySQLdb")
+ModuleNotFoundError: No module named 'MySQLdb'
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+
+The above exception was the direct cause of the following exception:
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+    return __import__("MySQLdb")
+
+Traceback (most recent call last):
+ModuleNotFoundError: No module named 'MySQLdb'
+
+  File "optuna_testing.py", line 70, in <module>
+    main()
+The above exception was the direct cause of the following exception:
+
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "optuna_testing.py", line 70, in <module>
+    main()
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+  File "<string>", line 2, in create_engine
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 216, in __init__
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+    self.engine = sqlalchemy.engine.create_engine(self.url, **self.engine_kwargs)
+  File "<string>", line 2, in create_engine
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+    return __import__("MySQLdb")
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+ModuleNotFoundError: No module named 'MySQLdb'
+
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/engine/create.py", line 601, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+The above exception was the direct cause of the following exception:
+
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/sqlalchemy/dialects/mysql/mysqldb.py", line 152, in import_dbapi
+    return __import__("MySQLdb")
+Traceback (most recent call last):
+ModuleNotFoundError: No module named 'MySQLdb'
+
+  File "optuna_testing.py", line 70, in <module>
+    main()
+The above exception was the direct cause of the following exception:
+
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+Traceback (most recent call last):
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "optuna_testing.py", line 70, in <module>
+    main()
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+  File "optuna_testing.py", line 58, in main
+    study = optuna.create_study(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/_convert_positional_args.py", line 61, in converter_wrapper
+    return func(**kwargs)
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/study/study.py", line 1242, in create_study
+    storage = storages.get_storage(storage)
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/__init__.py", line 43, in get_storage
+    return _CachedStorage(RDBStorage(storage))
+  File "/global/homes/g/gchen4/.conda/envs/VAE_MNIST/lib/python3.8/site-packages/optuna/storages/_rdb/storage.py", line 218, in __init__
+    raise ImportError(
+ImportError: Failed to import DB access module for the specified storage URL. Please install appropriate one.
+srun: error: nid008205: tasks 0-3: Exited with exit code 1
+srun: Terminating StepId=12063543.0
+srun: error: nid008352: tasks 0-3: Exited with exit code 1
+srun: Terminating StepId=12063543.1
