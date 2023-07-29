@@ -8,10 +8,6 @@ import torch
 import os
 
 def objective(trial):
-
-    # Get the checkpoint directory
-    checkpoint_dir = './checkpts'
-
     # Downloading the dataset
     trainset, testset = load_data()
 
@@ -32,6 +28,11 @@ def objective(trial):
     # Define the optimizer and scheduler
     optimizer = get_optimizer(model)
     scheduler = get_scheduler(optimizer)
+
+    # Get the checkpoint directory
+    checkpoint_dir = './checkpts'
+    if not os.path.exists(checkpoint_dir):
+        os.makedirs(checkpoint_dir)
 
     # If there's a checkpoint directory, try to resume.
     if checkpoint_dir is not None:
